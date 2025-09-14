@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 900px;
+      background: #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    .left {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    /* Background image */
+    .left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+    }
+
+    /* Dark overlay */
+    .left::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    /* Brand text */
+    .left .brand {
+      font-size: 40px;
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    .right {
+      flex: 1;
+      padding: 40px;
+      background: #2c2c2c;
+      color: white;
+    }
+
+    .right h2 {
+      margin-bottom: 10px;
+    }
+
+    .right p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .right input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background: #3a3a3a;
+      color: white;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin: 15px 0;
+    }
+
+    .checkbox input {
+      margin-right: 8px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: #6c63ff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .btn:hover {
+      background: #5952d4;
+    }
+
+    .social-btns {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .social-btns button {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #3a3a3a;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      margin: 0 5px;
+      cursor: pointer;
+      color: white;
+      font-weight: 500;
+    }
+
+    .social-btns i {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    .social-btns button:hover {
+      background: #4b4b4b;
+    }
+
+    a {
+      color: #6c63ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left">
+      <img src="C:\Users\tusha\OneDrive\Desktop\Python ALL4\webste\WhatsApp Image 2025-09-13 at 22.27.00_4e75a048.jpg" alt="background">
+      <div class="brand">APNAROOM</div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right">
+      <h2>Welcome Back</h2>
+      <p>Don’t have an account? <a href="index2.html">Sign up</a></p>
+
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Enter your password">
+
+      <div class="checkbox">
+        <input type="checkbox">
+        <label>Remember me</label>
+      </div>
+
+      <button class="btn">Log in</button>
+
+      <p style="text-align: center; margin: 10px 0;"><a href="#">Forgot password?</a></p>
+
+      <p style="text-align: center; margin: 10px 0;">Or log in with</p>
+
+      <div class="social-btns">
+        <button><i class='bx bxl-google'></i> Google</button>
+        <button><i class='bx bxl-apple'></i> Apple</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

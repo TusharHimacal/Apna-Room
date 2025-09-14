@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apna Room</title>
+  <style>
+    /* Global reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      color: #aaa;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #aaa;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #fff;
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    /* Recently Added */
+    .recent {
+      padding: 40px;
+    }
+
+    .recent h2 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+
+    .card {
+      min-width: 250px;
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content small {
+      display: block;
+      color: #bbb;
+      margin-bottom: 5px;
+    }
+
+    .card-content h3 {
+      font-size: 16px;
+      color: #fff;
+    }
+
+    /* Arrows */
+    .arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #222;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">APNAROOM</div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="index2.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find rooms and pgs <br> At best price <br> Near Your College</h1>
+  </section>
+
+  <!-- Recently Added -->
+  <section class="recent">
+    <h2>Recently Added</h2>
+    <div class="cards" id="cardSlider">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="">
+        <div class="card-content">
+          <small>Destination</small>
+          <h3>Search for a college ,location</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="">
+        <div class="card-content">
+          <small>Room type</small>
+          <h3>Double,Triple,For Family</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="">
+        <div class="card-content">
+          <small>Call to book</small>
+          <h3>+91 XXXXX XXXXX</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    const slider = document.getElementById('cardSlider');
+
+    function scrollLeft() {
+      slider.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+      slider.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
